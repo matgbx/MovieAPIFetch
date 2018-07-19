@@ -1,10 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ListItem = (props) => {
-    // console.log(props.movieData);
-    return (
-        <div className="item">{props.title}</div>
-    )
+  const { title } = props;
+  return (
+    <div className="item">
+      {
+        title
+      }
+    </div>
+  );
 };
 
 export default ListItem;
+
+ListItem.propTypes = {
+  title: PropTypes.string.isRequired,
+};
